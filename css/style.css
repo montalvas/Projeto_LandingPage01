@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fonte Personalizada";
+}
+
+html, body{
+    height: 100%;
+}
+
+/* Fonte importada */
+@font-face{
+    font-family: "Fonte Personalizada";
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+
+/* Margem do site */
+.center{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* Cabeçalho */
+header{
+    background-color: #212343;
+    width: 100%;
+    height: 60px;
+    padding: 0 2%;
+}
+
+header img{
+    margin: 15px; /*Posicionando a logo*/
+}
+/* Fim do cabeçalho */
+
+
+/* Banner */
+.container-banner{
+    width: 100%;
+    height: 557px;
+    padding: 0 2%;
+    background-image: url(../images/header_bg.png);
+    background-size: cover;
+}
+
+.container-banner > .center{
+    height: 100%;
+}
+
+/* Formulário */
+
+.form{
+    width: 400px;
+    height: calc(100% + 30px);
+    padding: 20px;
+    position: relative;
+    bottom: 15px;
+    background-color: white;
+    border: 12px solid rgba(120,120,120,0.5);
+    background-clip: padding-box;
+    float: right;
+}
+
+.form h2{
+    font-size: 21px;
+    font-weight: normal;
+    color: #999;
+}
+
+.form > form > section, .form form > p{
+    margin: 20px 0;
+}
+
+.form > form > section > label, .form form > p{
+    display: inline-block;
+    width: 100%;
+    font-size: 17px;
+    color: #BBB;
+    font-weight: bold;
+}
+
+.form input[type="text"], .form input[type="email"], .form input[type="tel"]{
+    margin-top: 8px;
+    width: 344px;
+    height: 55px;
+    border: 1px solid #ccc;
+}
+
+.form input[type="text"]:focus, .form input[type="email"]:focus, .form input[type="tel"]:focus{
+    padding: 8px 10px;
+    outline-color: #462663;
+}
+
+.form form > section:nth-of-type(4){
+    text-align: center;
+}
+
+.form input[type="submit"]{
+    width: 280px;
+    height: 56px;
+    background-color: #363A6D;
+    color: white;
+    font-size: 25px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 5px solid #4A5097;
+    cursor: pointer;
+}
+
+.form input[type="submit"]:hover{
+    background-color: #323665;
+}
+
+/* Fim do formulário */
+
+/* Lista */
+
+.lista{
+    width: 519px;
+    height: 270px;
+    margin-top: 100px;
+    padding: 30px;
+    background-color: rgba(33,35,67,0.7);
+    float: left;
+}
+
+.lista ul{
+    list-style-position: inside;
+}
+
+.lista ul li{
+    color: white;
+    margin-top: 18px;
+}
+
+/* Fim da lista */
+
+
+/* Container Text */
+
+.container-text{
+    padding: 40px 2%;
+    background-color: #DDD;
+    text-align: center;
+}
+
+.container-text h2{
+    font-weight: normal;
+}
+
+.container-text p{
+    width: 100%;
+    max-width: 768px;
+    display: inline-block;
+    text-align: justify;
+    margin: 15px 0;
+}
+
+/* Icone */
+
+.icone{
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/arrow.png);
+    background-size: 100% 100%;
+    position: relative;
+    left: calc(50% - 20px);
+    top: 60px;
+}
+
+/* Fim do Container Text */
+
+
+/* Container divisions */
+
+.container-divisions{
+    padding: 90px 2%;
+}
+
+.container-divisions h2{
+    text-align: center;
+    color: #462663;
+    font-weight: normal;
+}
+
+.divisions{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.divisions > section{
+    width: 33.333%;
+    float: left;
+    padding: 20px;
+}
+
+.divisions > section > img{
+    width: 70px;
+}
+
+.divisions > section > p{
+    text-align: justify;
+    padding: 10px;
+}
+
+.clear{
+    clear: both; /* Limpa o float das sections */
+}
+
+/* Fim do Container Divisions */
+
+
+
+/* Rodapé */
+
+footer{
+    border-top: 3px solid #888;
+    padding: 60px 2%;
+    text-align: center;
+    color: #888;
+}
+
+footer p{
+    margin-top: 8px;
+}
+
+/* Fim do rodapé */
+
+/* Responsividade */
+
+@media screen and (max-width: 1024px){
+    
+    /* Redefinindo cabeçalho */
+    header{
+        width: 100%;
+        height: auto;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    header img{
+        margin: 0;
+    }
+
+    /* Redefinindo banner */
+    .container-banner{
+        width: 100%;
+        height: auto;
+        padding: 40px 2%;
+        text-align: center;
+    }
+
+    .lista{
+        width: 40%;
+        max-width: 500px;
+        height: auto;
+        padding: 30px;
+        float: left;
+    }
+
+    .form{
+        max-width: 400px;
+        width: 60%;
+        height: 100%;
+        padding: 10px;
+        float: right;
+        top: 0;
+    }
+
+    .form input[type="text"], .form input[type="email"], .form input[type="tel"]{
+        width: 100%;
+        height: 55px;
+    }
+    
+    .form input[type="submit"]{
+        max-width: 280px;
+        width: 100%;
+        height: 56px;
+        
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+    /* Redefinindo banner */
+    .lista{
+        width: 100%;
+        margin-top: 0;
+        float: none;
+        display: inline-block;
+    }
+
+    .form{
+        width: 90%;
+        margin-top: 30px;
+        float: none;
+        display: inline-block;
+    }
+
+    /* Redefinindo container-text */
+    .divisions > section{
+        width: 100%;
+        max-width: 600px;
+        padding: 30px 0;
+        display: inline-block;
+        float: none;
+    }
+
+    .container-text > p{
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+    
+}
